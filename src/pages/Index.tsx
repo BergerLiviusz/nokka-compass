@@ -6,6 +6,12 @@ import { Input } from "@/components/ui/input";
 import { ArrowRight, Search, TrendingUp, Users, BookOpen, Mail } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import researchCollaboration from "@/assets/research-collaboration.jpg";
+import educationWorkspace from "@/assets/education-workspace.jpg";
+import dataAnalysis from "@/assets/data-analysis.jpg";
+import researchCoding from "@/assets/research-coding.jpg";
+import institutionBuilding from "@/assets/institution-building.jpg";
+import economicAnalysis from "@/assets/economic-analysis.jpg";
 
 const Index = () => {
   const [email, setEmail] = useState("");
@@ -24,21 +30,24 @@ const Index = () => {
       abstract: "Átfogó elemzés a COVID-19 járvány alatt bevezetett távmunka hosszú távú hatásairól.",
       type: "Tanulmány",
       publishedAt: "2024-01-15",
-      slug: "tavmunka-hatas-termekenyseg"
+      slug: "tavmunka-hatas-termekenyseg",
+      image: educationWorkspace
     },
     {
       title: "Digitális transzformáció a magyar KKV szektorban", 
       abstract: "Empirikus vizsgálat a digitális elfogadási mintákról és gazdasági hatásokról.",
       type: "Kutatás",
       publishedAt: "2024-01-10",
-      slug: "digital-transformation-smes"
+      slug: "digital-transformation-smes",
+      image: dataAnalysis
     },
     {
       title: "Oktatási egyenlőtlenségek a vidéki Magyarországon",
       abstract: "Részletes elemzés az oktatási hozzáférés és minőség területi különbségeiről.",
       type: "Blog",
       publishedAt: "2023-12-20", 
-      slug: "oktatasi-egyenlotlensegek"
+      slug: "oktatasi-egyenlotlensegek",
+      image: researchCoding
     }
   ];
 
@@ -46,17 +55,20 @@ const Index = () => {
     {
       icon: Search,
       title: "Kutatás",
-      description: "Magas színvonalú közgazdasági kutatások és elemzések a legmodernebb módszerekkel."
+      description: "Magas színvonalú közgazdasági kutatások és elemzések a legmodernebb módszerekkel.",
+      image: economicAnalysis
     },
     {
       icon: TrendingUp,
       title: "Tanácsadás",
-      description: "Szakértői tanácsadás vállalatok és közintézmények számára adatvezérelt döntéshozatalhoz."
+      description: "Szakértői tanácsadás vállalatok és közintézmények számára adatvezérelt döntéshozatalhoz.",
+      image: institutionBuilding
     },
     {
       icon: BookOpen,
       title: "Oktatás",
-      description: "Gyakorlat-orientált képzési programok és workshopok minden szintű résztvevő számára."
+      description: "Gyakorlat-orientált képzési programok és workshopok minden szintű résztvevő számára.",
+      image: educationWorkspace
     }
   ];
 
@@ -70,8 +82,16 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-background to-muted/20 py-20 md:py-32">
-        <div className="container relative">
+      <section className="relative overflow-hidden py-20 md:py-32">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={researchCollaboration} 
+            alt="Research collaboration workspace"
+            className="w-full h-full object-cover opacity-10"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/95 to-background/80" />
+        </div>
+        <div className="container relative z-10">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl mb-6">
               Közgazdasági kutatás. <br />
@@ -113,10 +133,23 @@ const Index = () => {
 
           <div className="grid gap-6 md:grid-cols-3">
             {featuredResearch.map((research, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow group">
+              <Card key={index} className="hover:shadow-lg transition-shadow group overflow-hidden">
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={research.image} 
+                    alt={research.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <Badge 
+                    variant="secondary" 
+                    className="absolute top-4 left-4 bg-background/90 backdrop-blur-sm"
+                  >
+                    {research.type}
+                  </Badge>
+                </div>
                 <CardHeader>
                   <div className="flex items-center justify-between mb-2">
-                    <Badge variant="secondary">{research.type}</Badge>
                     <span className="text-sm text-muted-foreground">
                       {new Date(research.publishedAt).toLocaleDateString("hu-HU")}
                     </span>
@@ -166,11 +199,21 @@ const Index = () => {
 
           <div className="grid gap-8 md:grid-cols-3">
             {services.map((service, index) => (
-              <Card key={index} className="text-center hover:shadow-md transition-shadow">
-                <CardHeader>
-                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
-                    <service.icon className="h-8 w-8 text-primary" />
+              <Card key={index} className="text-center hover:shadow-md transition-shadow group overflow-hidden">
+                <div className="relative h-40 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-background/50" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/90 backdrop-blur-sm">
+                      <service.icon className="h-8 w-8 text-white" />
+                    </div>
                   </div>
+                </div>
+                <CardHeader>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
