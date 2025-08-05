@@ -10,7 +10,7 @@ import researchCollaboration from "@/assets/research-collaboration.jpg";
 import educationWorkspace from "@/assets/education-workspace.jpg";
 import dataAnalysis from "@/assets/data-analysis.jpg";
 import researchCoding from "@/assets/research-coding-2.jpg";
-import researchLab from "@/assets/research-laboratory.jpg";
+import researchLab from "@/assets/research-laboratory-vibrant.jpg";
 import institutionBuilding from "@/assets/institution-building.jpg";
 import economicAnalysis from "@/assets/economic-analysis.jpg";
 
@@ -209,7 +209,7 @@ const Index = () => {
                   <img 
                     src={service.image} 
                     alt={service.title}
-                    className="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity"
+                    className="w-full h-full object-cover opacity-40 group-hover:opacity-50 transition-opacity"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-background/50" />
                   <div className="absolute inset-0 flex items-center justify-center">
