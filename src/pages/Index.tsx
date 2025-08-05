@@ -9,7 +9,7 @@ import { toast } from "sonner";
 import researchCollaboration from "@/assets/research-collaboration.jpg";
 import educationWorkspace from "@/assets/education-workspace.jpg";
 import dataAnalysis from "@/assets/data-analysis.jpg";
-import researchCoding from "@/assets/research-coding.jpg";
+import researchCoding from "@/assets/research-coding-2.jpg";
 import institutionBuilding from "@/assets/institution-building.jpg";
 import economicAnalysis from "@/assets/economic-analysis.jpg";
 
@@ -84,11 +84,15 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 md:py-32">
         <div className="absolute inset-0 z-0">
-          <img 
-            src={researchCollaboration} 
-            alt="Research collaboration workspace"
-            className="w-full h-full object-cover opacity-10"
-          />
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+            className="w-full h-full object-cover opacity-15"
+          >
+            <source src="/hero-background-video.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-b from-background/95 to-background/80" />
         </div>
         <div className="container relative z-10">

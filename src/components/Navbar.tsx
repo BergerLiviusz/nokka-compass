@@ -1,18 +1,13 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Search, Menu, X, Sun, Moon, Globe } from "lucide-react";
-import { useTheme } from "next-themes";
+import { Search, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { siteConfig } from "@/config/site";
-import { SearchDialog } from "./search/SearchDialog";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
@@ -49,36 +44,21 @@ export function Navbar() {
 
         {/* Controls */}
         <div className="flex items-center space-x-2">
-          {/* Search Button */}
-          <Dialog open={isSearchOpen} onOpenChange={setIsSearchOpen}>
-            <DialogTrigger asChild>
-              <Button variant="ghost" size="sm" className="text-muted-foreground">
-                <Search className="h-4 w-4" />
-                <span className="sr-only">Keresés</span>
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="max-w-2xl">
-              <SearchDialog onClose={() => setIsSearchOpen(false)} />
-            </DialogContent>
-          </Dialog>
-
-          {/* Language Toggle */}
-          <Button variant="ghost" size="sm" className="text-muted-foreground">
-            <Globe className="h-4 w-4" />
-            <span className="ml-1 text-xs">HU</span>
-          </Button>
-
-          {/* Theme Toggle */}
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="text-muted-foreground"
-          >
-            <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            <span className="sr-only">Téma váltás</span>
-          </Button>
+          {/* Publikációk Button with Gradient Animation */}
+          <Link to="/publikaciok">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="group relative overflow-hidden text-muted-foreground hover:text-primary transition-colors"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-nokka-green via-nokka-mint to-nokka-green bg-[length:200%_100%] opacity-0 group-hover:opacity-20 animate-[gradient_2s_ease-in-out_infinite] transition-opacity"></div>
+              <div className="absolute inset-0 border border-transparent bg-gradient-to-r from-nokka-green via-nokka-mint to-nokka-green bg-[length:200%_100%] rounded-md opacity-0 group-hover:opacity-100 animate-[gradient_2s_ease-in-out_infinite] transition-opacity [mask:linear-gradient(#fff_0_0)_padding-box,linear-gradient(#fff_0_0)] [mask-composite:xor] [mask-composite:exclude]"></div>
+              <div className="relative flex items-center">
+                <Search className="h-4 w-4 mr-2" />
+                <span className="text-sm font-medium">Publikációk</span>
+              </div>
+            </Button>
+          </Link>
 
           {/* Mobile Menu */}
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
