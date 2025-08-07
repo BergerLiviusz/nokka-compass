@@ -20,7 +20,7 @@ export function Navbar() {
           <img 
             src="/NOKKA_Logo_vector.svg" 
             alt="NOKKA" 
-            className="h-8 w-auto"
+            className="h-24 w-auto"
           />
         </Link>
 
