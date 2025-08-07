@@ -10,7 +10,7 @@ import researchCollaboration from "@/assets/research-collaboration.jpg";
 import educationWorkspace from "@/assets/education-workspace.jpg";
 import dataAnalysis from "@/assets/data-analysis.jpg";
 import researchCoding from "@/assets/research-coding-2.jpg";
-import researchLab from "@/assets/research-laboratory-vibrant.jpg";
+import researchLab from "@/assets/research-data-analytics.jpg";
 import institutionBuilding from "@/assets/institution-building.jpg";
 import economicAnalysis from "@/assets/economic-analysis.jpg";
 
