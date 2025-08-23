@@ -90,11 +90,16 @@ const Index = () => {
             muted 
             loop 
             playsInline
-            className="w-full h-full object-cover opacity-15"
+            controls={false}
+            className="w-full h-full object-cover opacity-40"
+            style={{
+              maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)'
+            }}
           >
             <source src="/uhd_25fps.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-background/95 to-background/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/90 to-background/70" />
         </div>
         <div className="container relative z-10">
           <div className="mx-auto max-w-4xl text-center">
