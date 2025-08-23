@@ -95,7 +95,7 @@ const Index = () => {
           >
             <source src="/uhd_25fps.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-black/20" />
+          <div className="absolute inset-0 bg-nokka-green/20" />
         </div>
         <div className="container relative z-10">
           <div className="mx-auto max-w-4xl text-center">
