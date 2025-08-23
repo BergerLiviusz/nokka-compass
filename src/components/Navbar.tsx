@@ -18,7 +18,7 @@ export function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <img 
-            src="/NOKKA_Logo_vector.svg" 
+            src="/NOKKA_Logo.svg" 
             alt="NOKKA" 
             className="h-20 w-auto"
           />
