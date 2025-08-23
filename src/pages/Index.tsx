@@ -94,7 +94,7 @@ const Index = () => {
             className="w-full h-full object-cover"
             style={{ 
               opacity: 0.5,
-              objectPosition: '20% center'
+              objectPosition: '10% center'
             }}
           >
             <source src="/uhd_25fps.mp4" type="video/mp4" />
@@ -102,7 +102,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-nokka-green/20" />
         </div>
         {/* Left gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background from-0% via-background/85 via-50% md:via-55% lg:via-60% to-transparent to-100%" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background from-0% via-background/75 via-45% md:via-50% lg:via-55% to-transparent to-100%" />
 
         {/* Animated Content Panel */}
         <div className="container relative z-10">
