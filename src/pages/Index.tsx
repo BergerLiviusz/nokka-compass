@@ -99,7 +99,7 @@ const Index = () => {
           >
             <source src="/uhd_25fps.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-green-400/15" />
+          <div className="absolute inset-0 bg-green-300/25" />
         </div>
         {/* Left gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-background/100 from-0% via-background/75 via-35% md:via-40% lg:via-45% to-transparent to-80%" />
