@@ -82,10 +82,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section - Split Layout */}
-      <section className="relative overflow-hidden py-0 md:py-0 min-h-screen flex">
-        {/* Video Side */}
-        <div className="relative flex-1 min-h-screen">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden h-[60vh] flex items-center">
+        {/* Full Width Background Video */}
+        <div className="absolute inset-0 z-0">
           <video 
             autoPlay 
             muted 
@@ -97,20 +97,21 @@ const Index = () => {
             <source src="/uhd_25fps.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-nokka-green/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/20" />
         </div>
 
-        {/* Text Content Side */}
-        <div className="flex-1 bg-background flex items-center justify-center p-8 md:p-16">
-          <div className="max-w-xl">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6">
+        {/* Animated Content Panel */}
+        <div className="container relative z-10">
+          <div className="max-w-2xl animate-fade-in">
+            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl mb-4 animate-slide-in-right [animation-delay:200ms] opacity-0 [animation-fill-mode:forwards]">
               Közgazdasági kutatás. <br />
               <span className="text-primary">Tanácsadás. Oktatás.</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-12">
+            <p className="text-lg text-muted-foreground mb-8 animate-slide-in-right [animation-delay:400ms] opacity-0 [animation-fill-mode:forwards]">
               NOKKA – magyar kutatói közösség és innovációs műhely a gazdaságtudomány 
               és adatelemzés szolgálatában.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 animate-slide-in-right [animation-delay:600ms] opacity-0 [animation-fill-mode:forwards]">
               <Link to="/research">
                 <Button variant="hero" size="lg">
                   Fedezd fel a kutatásokat
