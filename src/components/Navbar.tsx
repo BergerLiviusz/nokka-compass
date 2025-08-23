@@ -51,7 +51,7 @@ export function Navbar() {
               size="sm" 
               className="group relative overflow-hidden text-muted-foreground hover:text-primary transition-colors"
             >
-              <div className="absolute inset-0 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out bg-gradient-to-r from-nokka-green via-nokka-mint to-nokka-green bg-[length:200%_100%] animate-[gradient_60s_ease-in-out_infinite] p-[2px]">
+              <div className="absolute inset-0 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out bg-gradient-to-r from-nokka-green via-nokka-mint to-nokka-green bg-[length:200%_100%] animate-gradient-slow p-[2px]">
                 <div className="w-full h-full bg-background rounded-sm"></div>
               </div>
               <div className="relative flex items-center">

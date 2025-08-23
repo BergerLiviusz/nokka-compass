@@ -94,7 +94,8 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'gradient': 'gradient 2s ease-in-out infinite'
+				'gradient': 'gradient 2s ease-in-out infinite',
+				'gradient-slow': 'gradient 8s ease-in-out infinite'
 			}
 		}
 	},
