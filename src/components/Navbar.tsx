@@ -31,10 +31,10 @@ export function Navbar() {
               key={item.href}
               to={item.href}
               className={cn(
-                "transition-colors hover:text-primary focus:outline-offset-2 focus:outline-2 focus:outline-nokka-mint",
+                "px-3 py-2 rounded-md border border-transparent transition-all duration-300 hover:border-nokka-green hover:bg-nokka-green/10 hover:shadow-sm focus:outline-offset-2 focus:outline-2 focus:outline-nokka-mint",
                 isActive(item.href) 
-                  ? "text-primary font-semibold" 
-                  : "text-muted-foreground"
+                  ? "text-primary font-semibold border-nokka-green bg-nokka-green/10" 
+                  : "text-muted-foreground hover:text-primary"
               )}
             >
               {item.title}
