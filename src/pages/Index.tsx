@@ -85,7 +85,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden h-[60vh] flex items-center">
         {/* Right-aligned Responsive Video */}
-        <div className="absolute top-0 -left-20 z-0 w-[120%] md:w-[85%] lg:w-[70%] h-full overflow-hidden">
+        <div className="absolute top-0 right-0 z-0 w-full md:w-2/3 lg:w-1/2 h-full overflow-hidden">
           <video 
             autoPlay 
             muted 
@@ -94,8 +94,7 @@ const Index = () => {
             className="w-full h-full object-cover"
             style={{ 
               opacity: 0.5,
-              objectPosition: 'center center',
-              transform: 'scale(1.1)'
+              objectPosition: 'left center'
             }}
           >
             <source src="/uhd_25fps.mp4" type="video/mp4" />
