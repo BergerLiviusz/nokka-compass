@@ -52,7 +52,7 @@ export function Navbar() {
               className="group relative overflow-hidden text-muted-foreground hover:text-primary transition-colors"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-nokka-green via-nokka-mint to-nokka-green bg-[length:200%_100%] opacity-0 group-hover:opacity-20 animate-[gradient_2s_ease-in-out_infinite] transition-opacity"></div>
-              <div className="absolute inset-0 border border-transparent bg-gradient-to-r from-nokka-green via-nokka-mint to-nokka-green bg-[length:200%_100%] rounded-md opacity-0 group-hover:opacity-100 animate-[gradient_10s_ease-in-out_infinite] transition-all duration-5000 ease-in-out [background-clip:padding-box,border-box] [background-origin:border-box] [mask:linear-gradient(#fff_0_0)_padding-box,linear-gradient(#fff_0_0)] [mask-composite:xor]"></div>
+              <div className="absolute inset-0 border border-transparent bg-gradient-to-r from-nokka-green via-nokka-mint to-nokka-green bg-[length:200%_100%] rounded-md opacity-0 group-hover:opacity-100 animate-[gradient_10s_ease-in-out_infinite] transition-all duration-500 ease-in-out [background-clip:padding-box,border-box] [background-origin:border-box] [mask:linear-gradient(#fff_0_0)_padding-box,linear-gradient(#fff_0_0)] [mask-composite:xor]"></div>
               <div className="relative flex items-center">
                 <Search className="h-4 w-4 mr-2" />
                 <span className="text-sm font-medium">Publikációk</span>
