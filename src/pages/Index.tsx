@@ -94,13 +94,13 @@ const Index = () => {
             className="w-full h-full object-cover"
             style={{ 
               opacity: 0.5,
-              objectPosition: '70% center'
+              objectPosition: '85% center'
             }}
           >
             <source src="/uhd_25fps.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-nokka-green/20" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/100 via-background/90 to-background/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background from-0% via-background/95 via-40% to-background/10 to-70%" />
         </div>
 
         {/* Animated Content Panel */}
