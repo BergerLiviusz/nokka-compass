@@ -84,19 +84,19 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 md:py-32">
-        <div className="absolute inset-0 z-0 bg-muted/10">
+        <div className="absolute inset-0 z-0">
           <video 
             autoPlay 
             muted 
             loop 
             playsInline
-            controls={false}
-            className="w-full h-full object-cover opacity-30"
-            onError={(e) => console.error('Video failed to load:', e)}
+            className="w-full h-full object-cover"
+            style={{ opacity: 0.5 }}
           >
             <source src="/uhd_25fps.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
           </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-background/85 to-background/75" />
+          <div className="absolute inset-0 bg-background/60" />
         </div>
         <div className="container relative z-10">
           <div className="mx-auto max-w-4xl text-center">
