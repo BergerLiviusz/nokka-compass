@@ -85,7 +85,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden h-[60vh] flex items-center">
         {/* Right-aligned Responsive Video */}
-        <div className="absolute top-0 right-0 z-0 w-full md:w-2/3 lg:w-1/2 h-full overflow-hidden">
+        <div className="absolute top-0 right-0 z-0 w-[120%] md:w-[85%] lg:w-[65%] h-full overflow-hidden">
           <video 
             autoPlay 
             muted 
