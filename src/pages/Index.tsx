@@ -92,7 +92,7 @@ const Index = () => {
             playsInline
             className="w-full h-full object-cover opacity-15"
           >
-            <source src="/hero-background-video.mp4" type="video/mp4" />
+            <source src="/uhd_25fps.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-background/95 to-background/80" />
         </div>
