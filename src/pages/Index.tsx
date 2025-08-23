@@ -82,32 +82,35 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 md:py-32">
-        <div className="absolute inset-0 z-0">
+      {/* Hero Section - Split Layout */}
+      <section className="relative overflow-hidden py-0 md:py-0 min-h-screen flex">
+        {/* Video Side */}
+        <div className="relative flex-1 min-h-screen">
           <video 
             autoPlay 
             muted 
             loop 
             playsInline
             className="w-full h-full object-cover"
-            style={{ opacity: 0.3 }}
+            style={{ opacity: 0.7 }}
           >
             <source src="/uhd_25fps.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-nokka-green/20" />
+          <div className="absolute inset-0 bg-nokka-green/30" />
         </div>
-        <div className="container relative z-10">
-          <div className="mx-auto max-w-4xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl mb-6">
+
+        {/* Text Content Side */}
+        <div className="flex-1 bg-background flex items-center justify-center p-8 md:p-16">
+          <div className="max-w-xl">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6">
               Közgazdasági kutatás. <br />
               <span className="text-primary">Tanácsadás. Oktatás.</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground mb-12">
               NOKKA – magyar kutatói közösség és innovációs műhely a gazdaságtudomány 
               és adatelemzés szolgálatában.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/research">
                 <Button variant="hero" size="lg">
                   Fedezd fel a kutatásokat
