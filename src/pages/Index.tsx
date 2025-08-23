@@ -93,7 +93,7 @@ const Index = () => {
             className="w-full h-full object-cover"
             style={{ opacity: 0.5 }}
           >
-            <source src="/uhd_25fps.mp4" type="video/mp4" />
+            <source src="/hero-video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 bg-background/60" />
