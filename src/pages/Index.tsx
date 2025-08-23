@@ -132,6 +132,18 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Stylish Separator */}
+      <div className="relative">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-border/20"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <div className="bg-background px-6">
+            <div className="w-2 h-2 bg-gradient-to-r from-primary/40 to-primary/20 rounded-full"></div>
+          </div>
+        </div>
+      </div>
+
       {/* Featured Research */}
       <section className="py-16 md:py-24">
         <div className="container">
