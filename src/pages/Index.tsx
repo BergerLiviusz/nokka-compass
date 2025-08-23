@@ -94,7 +94,9 @@ const Index = () => {
             className="w-full h-full object-cover"
             style={{ 
               opacity: 0.5,
-              objectPosition: '85% center'
+              objectPosition: '20% center',
+              transform: 'scale(1.2)',
+              clipPath: 'inset(0 30% 0 0)'
             }}
           >
             <source src="/uhd_25fps.mp4" type="video/mp4" />
