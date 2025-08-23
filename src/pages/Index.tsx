@@ -84,23 +84,19 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 md:py-32">
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 bg-muted/10">
           <video 
             autoPlay 
             muted 
             loop 
             playsInline
             controls={false}
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-cover opacity-30"
+            onError={(e) => console.error('Video failed to load:', e)}
           >
-            <source src="./uhd_25fps.mp4" type="video/mp4" />
             <source src="/uhd_25fps.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background/60" />
-          <div className="absolute inset-0 backdrop-blur-[1px]" style={{
-            maskImage: 'linear-gradient(to right, blur(8px) 0%, transparent 20%, transparent 80%, blur(8px) 100%)',
-            WebkitMaskImage: 'linear-gradient(to right, blur(8px) 0%, transparent 20%, transparent 80%, blur(8px) 100%)'
-          }} />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/85 to-background/75" />
         </div>
         <div className="container relative z-10">
           <div className="mx-auto max-w-4xl text-center">
