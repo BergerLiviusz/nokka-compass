@@ -85,7 +85,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden h-[60vh] flex items-center">
         {/* Right-aligned Responsive Video */}
-        <div className="absolute top-0 right-0 z-0 w-[120%] md:w-[85%] lg:w-[65%] h-full overflow-hidden">
+        <div className="absolute top-0 right-0 z-0 w-[150%] md:w-[100%] lg:w-[75%] h-full overflow-hidden">
           <video 
             autoPlay 
             muted 
@@ -102,7 +102,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-nokka-green/20" />
         </div>
         {/* Left gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background from-0% via-background/95 via-50% to-transparent to-100%" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background from-0% via-background/98 via-40% md:via-55% lg:via-65% to-transparent to-100%" />
 
         {/* Animated Content Panel */}
         <div className="container relative z-10">
