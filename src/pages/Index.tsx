@@ -91,12 +91,11 @@ const Index = () => {
             loop 
             playsInline
             className="w-full h-full object-cover"
-            style={{ opacity: 0.5 }}
+            style={{ opacity: 0.3 }}
           >
-            <source src="/hero-video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
+            <source src="/uhd_25fps.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-background/60" />
+          <div className="absolute inset-0 bg-black/20" />
         </div>
         <div className="container relative z-10">
           <div className="mx-auto max-w-4xl text-center">
