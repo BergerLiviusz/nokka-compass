@@ -84,8 +84,8 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden h-[60vh] flex items-center">
-        {/* Right-aligned Responsive Video */}
-        <div className="absolute top-0 right-0 z-0 w-[140%] md:w-[90%] lg:w-[70%] h-full overflow-hidden">
+        {/* Full-width Video */}
+        <div className="absolute top-0 left-0 z-0 w-full h-full overflow-hidden">
           <video 
             autoPlay 
             muted 
@@ -94,7 +94,7 @@ const Index = () => {
             className="w-full h-full object-cover"
             style={{ 
               opacity: 0.5,
-              objectPosition: '40% center'
+              objectPosition: '20% center'
             }}
           >
             <source src="/uhd_25fps.mp4" type="video/mp4" />
@@ -102,7 +102,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-nokka-green/20" />
         </div>
         {/* Left gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background from-0% via-background/80 via-35% md:via-45% lg:via-55% to-transparent to-100%" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background from-0% via-background/85 via-50% md:via-55% lg:via-60% to-transparent to-100%" />
 
         {/* Animated Content Panel */}
         <div className="container relative z-10">
