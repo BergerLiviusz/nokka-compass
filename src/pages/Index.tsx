@@ -102,16 +102,16 @@ const Index = () => {
 
         {/* Animated Content Panel */}
         <div className="container relative z-10">
-          <div className="max-w-2xl animate-fade-in">
-            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl mb-4 animate-slide-in-right [animation-delay:200ms] opacity-0 [animation-fill-mode:forwards]">
+          <div className="max-w-2xl">
+            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl mb-4 animate-[slide-in-right_0.8s_ease-out]">
               Közgazdasági kutatás. <br />
               <span className="text-primary">Tanácsadás. Oktatás.</span>
             </h1>
-            <p className="text-lg text-muted-foreground mb-8 animate-slide-in-right [animation-delay:400ms] opacity-0 [animation-fill-mode:forwards]">
+            <p className="text-lg text-muted-foreground mb-8 animate-[slide-in-right_0.8s_ease-out_0.2s_both]">
               NOKKA – magyar kutatói közösség és innovációs műhely a gazdaságtudomány 
               és adatelemzés szolgálatában.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 animate-slide-in-right [animation-delay:600ms] opacity-0 [animation-fill-mode:forwards]">
+            <div className="flex flex-col sm:flex-row gap-4 animate-[slide-in-right_0.8s_ease-out_0.4s_both]">
               <Link to="/research">
                 <Button variant="hero" size="lg">
                   Fedezd fel a kutatásokat
