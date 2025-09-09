@@ -168,14 +168,16 @@ export default function Publikaciok() {
         <div className={viewMode === "grid" ? "grid gap-6 md:grid-cols-2 lg:grid-cols-3" : "space-y-4"}>
           {mockResearch.map((item, index) => (
             <Card key={item.id} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="p-4 pb-0">
+                <Badge variant={item.type === "paper" ? "default" : item.type === "research" ? "secondary" : "outline"}>
+                  {item.type === "paper" ? "Tanulmány" : item.type === "research" ? "Kutatás" : "Blog"}
+                </Badge>
+              </div>
               <CardHeader>
-                <div className="flex items-start justify-between gap-2">
+                <div className="flex items-start gap-2">
                   <CardTitle className="text-lg leading-tight hover:text-primary transition-colors cursor-pointer">
                     {item.title}
                   </CardTitle>
-                  <Badge variant={item.type === "paper" ? "default" : item.type === "research" ? "secondary" : "outline"}>
-                    {item.type === "paper" ? "Tanulmány" : item.type === "research" ? "Kutatás" : "Blog"}
-                  </Badge>
                 </div>
                 <CardDescription className="line-clamp-3">
                   {item.abstract}
