@@ -74,10 +74,22 @@ const Index = () => {
   ];
 
   const partners = [
-    "Magyar Tudományos Akadémia",
-    "Budapesti Corvinus Egyetem", 
-    "Eötvös Loránd Tudományegyetem",
-    "Budapesti Műszaki Egyetem"
+    {
+      name: "Magyar Tudományos Akadémia",
+      logo: "/logos/mta-logo.png"
+    },
+    {
+      name: "Budapesti Corvinus Egyetem",
+      logo: "/logos/corvinus-logo.png"
+    },
+    {
+      name: "Eötvös Loránd Tudományegyetem", 
+      logo: "/logos/elte-logo.png"
+    },
+    {
+      name: "Budapesti Műszaki Egyetem",
+      logo: "/logos/bme-logo.png"
+    }
   ];
 
   return (
@@ -259,8 +271,15 @@ const Index = () => {
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {partners.map((partner, index) => (
               <Card key={index} className="text-center p-6 hover:shadow-md transition-shadow">
-                <CardContent className="p-0">
-                  <p className="font-medium text-muted-foreground">{partner}</p>
+                <CardContent className="p-0 space-y-4">
+                  <div className="flex justify-center">
+                    <img 
+                      src={partner.logo} 
+                      alt={`${partner.name} logo`}
+                      className="h-16 w-auto object-contain"
+                    />
+                  </div>
+                  <p className="font-medium text-muted-foreground">{partner.name}</p>
                 </CardContent>
               </Card>
             ))}
