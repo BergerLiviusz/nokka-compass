@@ -18,7 +18,7 @@ export function Footer() {
             </p>
             <div className="flex items-center space-x-2">
               <img 
-                src="/NOKKA_Full_transparent.svg" 
+                src="/NOKKA_Logo.svg" 
                 alt="NOKKA" 
                 className="h-20 w-auto"
               />
