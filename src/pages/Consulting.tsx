@@ -3,10 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { TrendingUp, BarChart, Database, ArrowRight } from "lucide-react";
-
 export default function Consulting() {
-  return (
-    <div className="container py-8">
+  return <div className="container py-8">
       {/* Header */}
       <div className="mb-12 text-center">
         <h1 className="text-3xl font-bold tracking-tight mb-4">Tanácsadási szolgáltatások</h1>
@@ -142,15 +140,11 @@ export default function Consulting() {
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 md:p-12 text-center">
         <h2 className="text-2xl font-bold mb-4">Kezdjük el az együttműködést</h2>
-        <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-          Vegye fel velünk a kapcsolatot, hogy megbeszélhessük, hogyan segíthetünk 
-          Önnek szakértelmünkkel és kutatási tapasztalatunkkal.
-        </p>
+        <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">Vegye fel velünk a kapcsolatot hogy személyesen segíthessünk Önnek szakértelmünkkel és kutatási tapasztalatunkkal.</p>
         <Button size="lg" className="gap-2">
           Konzultáció kérése
           <ArrowRight className="h-4 w-4" />
         </Button>
       </div>
-    </div>
-  );
+    </div>;
 }
