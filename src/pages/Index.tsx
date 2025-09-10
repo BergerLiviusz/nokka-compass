@@ -211,7 +211,7 @@ const Index = () => {
                     duration: 3.5,
                     ease: "linear",
                   }}
-                  className="absolute inset-0 z-0 bg-gradient-to-br from-primary/30 via-primary/0 to-primary/30 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                  className="absolute inset-0 z-0 bg-gradient-to-br from-primary/60 via-primary/10 to-primary/60 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                 />
               </div>
             ))}
@@ -277,7 +277,7 @@ const Index = () => {
                     duration: 4,
                     ease: "linear",
                   }}
-                  className="absolute inset-0 z-0 bg-gradient-to-br from-primary/30 via-primary/0 to-primary/30 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                  className="absolute inset-0 z-0 bg-gradient-to-br from-primary/60 via-primary/10 to-primary/60 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                 />
               </div>
             ))}
