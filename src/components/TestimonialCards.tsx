@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
+import testimonial1 from "@/assets/testimonial-1.jpg";
+import testimonial2 from "@/assets/testimonial-2.jpg";
+import testimonial3 from "@/assets/testimonial-3.jpg";
 
 const TestimonialCards = () => {
   const [order, setOrder] = useState(["front", "middle", "back"]);
@@ -14,23 +17,23 @@ const TestimonialCards = () => {
     <div className="grid place-content-center overflow-hidden px-8 py-12">
       <div className="relative -ml-[100px] h-[450px] w-[350px] md:-ml-[175px]">
         <Card
-          imgUrl="/logos/corvinus-logo.png"
-          testimonial="A NOKKA kutatásai alapvetően megváltoztatták a magyar gazdaságpolitika megközelítését. Minden reggel az ő elemzéseikkel kezdem a napomat."
-          author="Dr. Kovács Anna - Gazdasági Elemző @ MNB"
+          imgUrl={testimonial1}
+          testimonial="A NOKKA tanácsadó csapata kiváló szakmai támogatást nyújtott stratégiai projekteinkhez. Az ő elemzéseik alapvetően alakították át döntéshozatali folyamatainkat."
+          author="Dr. Kovács Anna - Gazdasági Igazgató"
           handleShuffle={handleShuffle}
           position={order[0]}
         />
         <Card
-          imgUrl="/logos/elte-logo.png"
-          testimonial="Főnököm azt hiszi, értek a közgazdaságtanhoz. Őszintén szólva, csak a NOKKA kutatásait olvasom rendszeresen."
-          author="Nagy Péter - Pénzügyi Tanácsadó @ OTP Bank"
+          imgUrl={testimonial2}
+          testimonial="A doktori képzési programjuk során szerzett tudás és módszertan jelentősen hozzájárult kutatási munkám minőségéhez. Professzionális és gyakorlatorientált oktatás."
+          author="Nagy Péter - PhD hallgató"
           handleShuffle={handleShuffle}
           position={order[1]}
         />
         <Card
-          imgUrl="/logos/mta-logo.png"
-          testimonial="Hihetetlen, hogy ez ingyenes. Ha a NOKKA havi 500 000 forintba kerülne, akkor is megérné minden fillért. A következő gyerekemet NOKKA-ra keresztelem."
-          author="Dr. Szabó László - Kutatásvezető @ Corvinus Egyetem"
+          imgUrl={testimonial3}
+          testimonial="A NOKKA csapata magas színvonalú kutatási és tanácsadói szolgáltatásokat nyújt. Különösen értékelem a módszertani precizitást és gyakorlati alkalmazhatóságot."
+          author="Dr. Szabó László - Egyetemi tanár"
           handleShuffle={handleShuffle}
           position={order[2]}
         />
@@ -87,11 +90,11 @@ const Card = ({ handleShuffle, testimonial, position, imgUrl, author }: any) => 
         draggable ? "cursor-grab active:cursor-grabbing" : ""
       }`}
     >
-      <div className="pointer-events-none mx-auto h-32 w-32 rounded-full border-2 border-border bg-muted p-4 flex items-center justify-center">
+      <div className="pointer-events-none mx-auto h-32 w-32 rounded-full border-2 border-border bg-muted overflow-hidden">
         <img
           src={imgUrl}
           alt={`Image of ${author}`}
-          className="h-full w-full object-contain"
+          className="w-full h-full object-cover"
         />
       </div>
       <span className="text-center text-lg italic text-muted-foreground">
