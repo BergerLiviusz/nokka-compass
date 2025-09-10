@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { ArrowRight, Search, TrendingUp, Users, BookOpen, Mail } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import BubbleBackground from "@/components/BubbleBackground";
 import researchCollaboration from "@/assets/research-collaboration.jpg";
 import educationWorkspace from "@/assets/education-workspace.jpg";
 import dataAnalysis from "@/assets/data-analysis.jpg";
@@ -214,8 +215,9 @@ const Index = () => {
       </section>
 
       {/* Services */}
-      <section className="py-16 md:py-24 bg-muted/20">
-        <div className="container">
+      <section className="py-16 md:py-24 bg-muted/20 relative overflow-hidden">
+        <BubbleBackground opacity={0.1} />
+        <div className="container relative z-10">
           <div className="mx-auto max-w-2xl text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
               Mit csinálunk?
@@ -257,8 +259,9 @@ const Index = () => {
       </section>
 
       {/* Partners */}
-      <section className="py-16 md:py-24">
-        <div className="container">
+      <section className="py-16 md:py-24 relative overflow-hidden">
+        <BubbleBackground opacity={0.08} />
+        <div className="container relative z-10">
           <div className="mx-auto max-w-2xl text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
               Partnereink
