@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Search, Menu } from "lucide-react";
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { siteConfig } from "@/config/site";
@@ -50,23 +49,15 @@ export function Navbar() {
             <Button 
               variant="ghost" 
               size="sm" 
-              className="group relative overflow-hidden text-muted-foreground hover:text-primary transition-colors p-0.5"
+              className="group relative overflow-hidden text-muted-foreground hover:text-primary transition-colors"
             >
-              <div className="relative z-10 flex items-center bg-background rounded-md px-3 py-2 border border-border transition-colors duration-500 group-hover:bg-background/90">
+              <div className="absolute inset-0 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out bg-gradient-to-r from-nokka-green via-nokka-mint to-nokka-green bg-[length:200%_100%] animate-gradient-slow p-[2px]">
+                <div className="w-full h-full bg-background rounded-sm"></div>
+              </div>
+              <div className="relative flex items-center">
                 <Search className="h-4 w-4 mr-2" />
                 <span className="text-sm font-medium">Publikációk</span>
               </div>
-              <motion.div
-                initial={{ rotate: "0deg" }}
-                animate={{ rotate: "360deg" }}
-                style={{ scale: 1.75 }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 3.5,
-                  ease: "linear",
-                }}
-                className="absolute inset-0 z-0 bg-gradient-to-br from-primary/60 via-primary/10 to-primary/60 opacity-0 transition-opacity duration-500 group-hover:opacity-100 rounded-md"
-              />
             </Button>
           </Link>
 
