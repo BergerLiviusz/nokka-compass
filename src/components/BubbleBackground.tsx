@@ -89,6 +89,19 @@ const BubbleBackground = ({ className = "", opacity = 0.15 }: BubbleBackgroundPr
           }}
         />
         
+        {/* Darker green shade */}
+        <div 
+          className="absolute animate-[moveInCircle_35s_linear_infinite] mix-blend-hard-light"
+          style={{
+            background: `radial-gradient(circle at center, hsla(151, 68%, 42%, 0.7) 0%, hsla(151, 68%, 42%, 0) 50%)`,
+            width: '90%',
+            height: '90%',
+            top: 'calc(50% - 45%)',
+            left: 'calc(50% - 45%)',
+            transformOrigin: 'calc(50% + 300px)',
+          }}
+        />
+        
         {/* Accent color - lighter mint */}
         <div 
           className="absolute animate-[moveInCircle_40s_linear_infinite] mix-blend-hard-light"
@@ -102,24 +115,24 @@ const BubbleBackground = ({ className = "", opacity = 0.15 }: BubbleBackgroundPr
           }}
         />
         
-        {/* NOKKA Gray accent */}
+        {/* Forest green variation */}
         <div 
-          className="absolute animate-[moveHorizontal_40s_ease_infinite] mix-blend-hard-light opacity-70"
+          className="absolute animate-[moveHorizontal_45s_ease_infinite] mix-blend-hard-light opacity-60"
           style={{
-            background: `radial-gradient(circle at center, hsla(0, 0%, 18%, 0.4) 0%, hsla(0, 0%, 18%, 0) 50%)`,
-            width: '80%',
-            height: '80%',
-            top: 'calc(50% - 40%)',
-            left: 'calc(50% - 40%)',
-            transformOrigin: 'calc(50% - 200px)',
+            background: `radial-gradient(circle at center, hsla(148, 55%, 38%, 0.6) 0%, hsla(148, 55%, 38%, 0) 50%)`,
+            width: '70%',
+            height: '70%',
+            top: 'calc(50% - 35%)',
+            left: 'calc(50% - 35%)',
+            transformOrigin: 'calc(50% - 150px)',
           }}
         />
         
-        {/* Large background bubble */}
+        {/* Large background bubble with emerald tone */}
         <div 
           className="absolute animate-[moveInCircle_20s_ease_infinite] mix-blend-hard-light"
           style={{
-            background: `radial-gradient(circle at center, hsla(151, 62%, 62%, 0.5) 0%, hsla(151, 62%, 62%, 0) 50%)`,
+            background: `radial-gradient(circle at center, hsla(155, 60%, 58%, 0.5) 0%, hsla(155, 60%, 58%, 0) 50%)`,
             width: '160%',
             height: '160%',
             top: 'calc(50% - 80%)',
