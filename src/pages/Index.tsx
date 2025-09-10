@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { ArrowRight, Search, TrendingUp, Users, BookOpen, Mail } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { motion } from "framer-motion";
 import researchCollaboration from "@/assets/research-collaboration.jpg";
 import educationWorkspace from "@/assets/education-workspace.jpg";
 import dataAnalysis from "@/assets/data-analysis.jpg";
@@ -162,43 +163,57 @@ const Index = () => {
 
           <div className="grid gap-6 md:grid-cols-3">
             {featuredResearch.map((research, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow group overflow-hidden">
-                <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={research.image} 
-                    alt={research.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                  <Badge 
-                    variant="secondary" 
-                    className="absolute top-4 left-4 bg-background/90 backdrop-blur-sm"
-                  >
-                    {research.type}
-                  </Badge>
-                </div>
-                <CardHeader>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-muted-foreground">
-                      {new Date(research.publishedAt).toLocaleDateString("hu-HU")}
-                    </span>
+              <div key={index} className="group relative w-full overflow-hidden rounded-lg bg-card/50 p-0.5 transition-all duration-500 hover:scale-[1.01] hover:shadow-lg">
+                <Card className="relative z-10 overflow-hidden border-0 bg-card transition-colors duration-500 group-hover:bg-card/90">
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={research.image} 
+                      alt={research.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    <Badge 
+                      variant="secondary" 
+                      className="absolute top-4 left-4 bg-background/90 backdrop-blur-sm"
+                    >
+                      {research.type}
+                    </Badge>
                   </div>
-                  <CardTitle className="text-lg group-hover:text-primary transition-colors">
-                    {research.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="mb-4">
-                    {research.abstract}
-                  </CardDescription>
-                  <Link to={`/research/${research.slug}`}>
-                    <Button variant="ghost" size="sm" className="w-full group-hover:bg-primary/5">
-                      Tovább olvasás
-                      <ArrowRight className="h-4 w-4" />
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm text-muted-foreground">
+                        {new Date(research.publishedAt).toLocaleDateString("hu-HU")}
+                      </span>
+                    </div>
+                    <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                      {research.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="mb-4">
+                      {research.abstract}
+                    </CardDescription>
+                    <Link to={`/research/${research.slug}`}>
+                      <Button variant="ghost" size="sm" className="w-full group-hover:bg-primary/5">
+                        Tovább olvasás
+                        <ArrowRight className="h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+                
+                <motion.div
+                  initial={{ rotate: "0deg" }}
+                  animate={{ rotate: "360deg" }}
+                  style={{ scale: 1.75 }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 3.5,
+                    ease: "linear",
+                  }}
+                  className="absolute inset-0 z-0 bg-gradient-to-br from-primary/30 via-primary/0 to-primary/30 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                />
+              </div>
             ))}
           </div>
 
@@ -228,29 +243,43 @@ const Index = () => {
 
           <div className="grid gap-8 md:grid-cols-3">
             {services.map((service, index) => (
-              <Card key={index} className="text-center hover:shadow-md transition-shadow group overflow-hidden">
-                <div className="relative h-40 overflow-hidden">
-                  <img 
-                    src={service.image} 
-                    alt={service.title}
-                    className="w-full h-full object-cover opacity-40 group-hover:opacity-50 transition-opacity"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-background/50" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/90 backdrop-blur-sm">
-                      <service.icon className="h-8 w-8 text-white" />
+              <div key={index} className="group relative w-full overflow-hidden rounded-lg bg-card/50 p-0.5 transition-all duration-500 hover:scale-[1.01] hover:shadow-md">
+                <Card className="relative z-10 text-center border-0 bg-card transition-colors duration-500 group-hover:bg-card/90 overflow-hidden">
+                  <div className="relative h-40 overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover opacity-40 group-hover:opacity-50 transition-opacity"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-background/50" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/90 backdrop-blur-sm">
+                        <service.icon className="h-8 w-8 text-white" />
+                      </div>
                     </div>
                   </div>
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
+                  <CardHeader>
+                    <CardTitle className="text-xl">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-base">
+                      {service.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+                
+                <motion.div
+                  initial={{ rotate: "0deg" }}
+                  animate={{ rotate: "360deg" }}
+                  style={{ scale: 1.75 }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 4,
+                    ease: "linear",
+                  }}
+                  className="absolute inset-0 z-0 bg-gradient-to-br from-primary/30 via-primary/0 to-primary/30 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                />
+              </div>
             ))}
           </div>
         </div>
