@@ -52,7 +52,7 @@ export function Navbar() {
               size="sm" 
               className="group relative overflow-hidden text-muted-foreground hover:text-primary transition-colors p-0.5"
             >
-              <div className="relative z-10 flex items-center bg-background rounded-md px-3 py-2 transition-colors duration-500 group-hover:bg-background/90">
+              <div className="relative z-10 flex items-center bg-background rounded-md px-3 py-2 border border-border transition-colors duration-500 group-hover:bg-background/90">
                 <Search className="h-4 w-4 mr-2" />
                 <span className="text-sm font-medium">Publikációk</span>
               </div>
