@@ -10,39 +10,27 @@ const TestimonialCards = () => {
     setOrder(orderCopy);
   };
 
-  const testimonials = [
-    {
-      imgUrl: "/logos/corvinus-logo.png",
-      testimonial: "A NOKKA kutatásai alapvetően megváltoztatták a magyar gazdaságpolitika megközelítését. Minden reggel az ő elemzéseikkel kezdem a napomat.",
-      author: "Dr. Kovács Anna - Gazdasági Elemző @ MNB"
-    },
-    {
-      imgUrl: "/logos/elte-logo.png", 
-      testimonial: "Főnököm azt hiszi, értek a közgazdaságtanhoz. Őszintén szólva, csak a NOKKA kutatásait olvasom rendszeresen.",
-      author: "Nagy Péter - Pénzügyi Tanácsadó @ OTP Bank"
-    },
-    {
-      imgUrl: "/logos/mta-logo.png",
-      testimonial: "Hihetetlen, hogy ez ingyenes. Ha a NOKKA havi 500 000 forintba kerülne, akkor is megérné minden fillért. A következő gyerekemet NOKKA-ra keresztelem.",
-      author: "Dr. Szabó László - Kutatásvezető @ Corvinus Egyetem"
-    }
-  ];
-
   return (
-    <div className="grid place-content-center overflow-hidden bg-gradient-to-br from-background to-muted/30 px-8 py-24 text-foreground">
+    <div className="grid place-content-center overflow-hidden px-8 py-12">
       <div className="relative -ml-[100px] h-[450px] w-[350px] md:-ml-[175px]">
         <Card
-          testimonial={testimonials[0]}
+          imgUrl="/logos/corvinus-logo.png"
+          testimonial="A NOKKA kutatásai alapvetően megváltoztatták a magyar gazdaságpolitika megközelítését. Minden reggel az ő elemzéseikkel kezdem a napomat."
+          author="Dr. Kovács Anna - Gazdasági Elemző @ MNB"
           handleShuffle={handleShuffle}
           position={order[0]}
         />
         <Card
-          testimonial={testimonials[1]}
+          imgUrl="/logos/elte-logo.png"
+          testimonial="Főnököm azt hiszi, értek a közgazdaságtanhoz. Őszintén szólva, csak a NOKKA kutatásait olvasom rendszeresen."
+          author="Nagy Péter - Pénzügyi Tanácsadó @ OTP Bank"
           handleShuffle={handleShuffle}
           position={order[1]}
         />
         <Card
-          testimonial={testimonials[2]}
+          imgUrl="/logos/mta-logo.png"
+          testimonial="Hihetetlen, hogy ez ingyenes. Ha a NOKKA havi 500 000 forintba kerülne, akkor is megérné minden fillért. A következő gyerekemet NOKKA-ra keresztelem."
+          author="Dr. Szabó László - Kutatásvezető @ Corvinus Egyetem"
           handleShuffle={handleShuffle}
           position={order[2]}
         />
@@ -51,7 +39,7 @@ const TestimonialCards = () => {
   );
 };
 
-const Card = ({ handleShuffle, testimonial, position }) => {
+const Card = ({ handleShuffle, testimonial, position, imgUrl, author }: any) => {
   const mousePosRef = useRef(0);
 
   const onDragStart = (e: any) => {
@@ -95,22 +83,22 @@ const Card = ({ handleShuffle, testimonial, position }) => {
       transition={{
         duration: 0.35,
       }}
-      className={`absolute left-0 top-0 grid h-[450px] w-[350px] select-none place-content-center space-y-6 rounded-2xl border-2 border-border bg-card/80 backdrop-blur-md p-6 shadow-xl ${
+      className={`absolute left-0 top-0 grid h-[450px] w-[350px] select-none place-content-center space-y-6 rounded-2xl border-2 border-border bg-card/20 p-6 shadow-xl backdrop-blur-md ${
         draggable ? "cursor-grab active:cursor-grabbing" : ""
       }`}
     >
-      <div className="mx-auto h-24 w-24 rounded-full border-2 border-border bg-muted p-4 flex items-center justify-center">
+      <div className="pointer-events-none mx-auto h-32 w-32 rounded-full border-2 border-border bg-muted p-4 flex items-center justify-center">
         <img
-          src={testimonial.imgUrl}
-          alt={`Logo of ${testimonial.author}`}
-          className="pointer-events-none h-full w-full object-contain"
+          src={imgUrl}
+          alt={`Image of ${author}`}
+          className="h-full w-full object-contain"
         />
       </div>
-      <span className="text-center text-lg italic text-muted-foreground leading-relaxed">
-        "{testimonial.testimonial}"
+      <span className="text-center text-lg italic text-muted-foreground">
+        "{testimonial}"
       </span>
       <span className="text-center text-sm font-medium text-primary">
-        {testimonial.author}
+        {author}
       </span>
     </motion.div>
   );
