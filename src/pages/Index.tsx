@@ -214,7 +214,7 @@ const Index = () => {
       </section>
 
       {/* Services */}
-      <section className="py-16 md:py-24 bg-muted/20">
+      <section className="py-16 md:py-24">
         <div className="container">
           <div className="mx-auto max-w-2xl text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
