@@ -14,6 +14,7 @@ import researchCoding from "@/assets/research-coding-2.jpg";
 import researchLab from "@/assets/research-data-analytics.jpg";
 import institutionBuilding from "@/assets/institution-building.jpg";
 import economicAnalysis from "@/assets/economic-analysis.jpg";
+import TestimonialCards from "@/components/TestimonialCards";
 
 const Index = () => {
   const [email, setEmail] = useState("");
@@ -225,6 +226,26 @@ const Index = () => {
               </Button>
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 md:py-24">
+        <div className="container">
+          <div className="mx-auto max-w-2xl text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+              Mit mondanak rólunk?
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Partnereink és kollégáink visszajelzései munkánkról és hatásáról 
+              a magyar gazdasági gondolkodásra.
+            </p>
+            <p className="text-sm text-muted-foreground/80 mt-4">
+              Húzza a kártyákat a vélemények közötti váltáshoz
+            </p>
+          </div>
+          
+          <TestimonialCards />
         </div>
       </section>
 
