@@ -107,11 +107,11 @@ export default function Research() {
           {mockResearch.map((item) => (
             <Card key={item.id} className="hover:shadow-md transition-shadow">
               <CardHeader>
-                <div className="flex items-start justify-between gap-2">
-                  <CardTitle className="text-lg leading-tight">{item.title}</CardTitle>
-                  <Badge variant={item.type === "paper" ? "default" : "secondary"}>
+                <div className="space-y-3">
+                  <Badge variant={item.type === "paper" ? "default" : "secondary"} className="w-fit">
                     {item.type}
                   </Badge>
+                  <CardTitle className="text-lg leading-tight">{item.title}</CardTitle>
                 </div>
                 <CardDescription className="line-clamp-3">
                   {item.abstract}
